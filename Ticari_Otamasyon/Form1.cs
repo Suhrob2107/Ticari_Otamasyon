@@ -16,5 +16,15 @@ namespace Ticari_Otamasyon
             InitializeComponent();
 
         }
+        FrmUrunler fr;
+        private void BtnUrunler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(fr == null || fr.IsDisposed)
+            {
+                fr = new FrmUrunler();
+                fr.MdiParent = this;
+                fr.Show();
+            }
+        }
     }
 }

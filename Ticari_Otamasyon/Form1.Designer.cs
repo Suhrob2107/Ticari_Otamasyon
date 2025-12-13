@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             BtnUrunler = new DevExpress.XtraBars.BarButtonItem();
@@ -45,7 +46,9 @@
             BtnAyarlar = new DevExpress.XtraBars.BarButtonItem();
             ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(components);
             ((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).BeginInit();
             SuspendLayout();
             // 
             // ribbonControl1
@@ -67,6 +70,7 @@
             BtnUrunler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnUrunler.ItemAppearance.Normal.Options.UseFont = true;
             BtnUrunler.Name = "BtnUrunler";
+            BtnUrunler.ItemClick += BtnUrunler_ItemClick;
             // 
             // btnStoklar
             // 
@@ -211,6 +215,10 @@
             ribbonPageGroup1.ItemLinks.Add(BtnAyarlar);
             ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
+            // xtraTabbedMdiManager1
+            // 
+            xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +229,7 @@
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)ribbonControl1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -244,6 +253,7 @@
         private DevExpress.XtraBars.BarButtonItem BtnRehber;
         private DevExpress.XtraBars.BarButtonItem BtnFaturalar;
         private DevExpress.XtraBars.BarButtonItem BtnAyarlar;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
 
