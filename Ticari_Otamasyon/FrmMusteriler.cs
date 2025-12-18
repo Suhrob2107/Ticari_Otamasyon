@@ -119,5 +119,6 @@ namespace Ticari_Otamasyon
             RchAddress.Text = dr["Adress"].ToString();
             TxtVergi.Text = dr["Vergidaire"].ToString();
         }
+        
     }
 }

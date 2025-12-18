@@ -75,7 +75,11 @@
             groupControl7 = new DevExpress.XtraEditors.GroupControl();
             xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            RchKod1 = new System.Windows.Forms.RichTextBox();
             xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            RchKod2 = new System.Windows.Forms.RichTextBox();
+            xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
+            RchKod3 = new System.Windows.Forms.RichTextBox();
             groupControl6 = new DevExpress.XtraEditors.GroupControl();
             TxtKod3 = new DevExpress.XtraEditors.TextEdit();
             labelControl18 = new DevExpress.XtraEditors.LabelControl();
@@ -83,10 +87,7 @@
             labelControl17 = new DevExpress.XtraEditors.LabelControl();
             TxtKod1 = new DevExpress.XtraEditors.TextEdit();
             labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            xtraTabPage6 = new DevExpress.XtraTab.XtraTabPage();
-            RchKod2 = new System.Windows.Forms.RichTextBox();
-            RchKod1 = new System.Windows.Forms.RichTextBox();
-            RchKod3 = new System.Windows.Forms.RichTextBox();
+            BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtVergi.Properties).BeginInit();
@@ -117,18 +118,19 @@
             xtraTabControl2.SuspendLayout();
             xtraTabPage4.SuspendLayout();
             xtraTabPage5.SuspendLayout();
+            xtraTabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)groupControl6).BeginInit();
             groupControl6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)TxtKod3.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtKod2.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtKod1.Properties).BeginInit();
-            xtraTabPage6.SuspendLayout();
             SuspendLayout();
             // 
             // gridView1
             // 
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
+            gridView1.FocusedRowChanged += gridView1_FocusedRowChanged;
             // 
             // gridControl1
             // 
@@ -177,6 +179,7 @@
             CmbIL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
             CmbIL.Size = new System.Drawing.Size(178, 24);
             CmbIL.TabIndex = 27;
+            CmbIL.SelectedIndexChanged += CmbIL_SelectedIndexChanged;
             // 
             // MskTelefon2
             // 
@@ -220,33 +223,36 @@
             BtnGuncelle.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnGuncelle.Appearance.Options.UseFont = true;
             BtnGuncelle.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("BtnGuncelle.ImageOptions.Image");
-            BtnGuncelle.Location = new System.Drawing.Point(80, 516);
+            BtnGuncelle.Location = new System.Drawing.Point(80, 434);
             BtnGuncelle.Name = "BtnGuncelle";
             BtnGuncelle.Size = new System.Drawing.Size(147, 36);
             BtnGuncelle.TabIndex = 21;
             BtnGuncelle.Text = "Guncelle";
+            BtnGuncelle.Click += BtnGuncelle_Click;
             // 
             // BtnSil
             // 
             BtnSil.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnSil.Appearance.Options.UseFont = true;
             BtnSil.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("BtnSil.ImageOptions.Image");
-            BtnSil.Location = new System.Drawing.Point(80, 474);
+            BtnSil.Location = new System.Drawing.Point(80, 392);
             BtnSil.Name = "BtnSil";
             BtnSil.Size = new System.Drawing.Size(147, 36);
             BtnSil.TabIndex = 20;
             BtnSil.Text = "Sil";
+            BtnSil.Click += BtnSil_Click;
             // 
             // BtnKaydet
             // 
             BtnKaydet.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnKaydet.Appearance.Options.UseFont = true;
             BtnKaydet.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("BtnKaydet.ImageOptions.Image");
-            BtnKaydet.Location = new System.Drawing.Point(80, 432);
+            BtnKaydet.Location = new System.Drawing.Point(80, 350);
             BtnKaydet.Name = "BtnKaydet";
             BtnKaydet.Size = new System.Drawing.Size(147, 36);
             BtnKaydet.TabIndex = 19;
             BtnKaydet.Text = "Kaydet";
+            BtnKaydet.Click += BtnKaydet_Click;
             // 
             // RchAddress
             // 
@@ -536,6 +542,7 @@
             // 
             // groupControl5
             // 
+            groupControl5.Controls.Add(BtnTemizle);
             groupControl5.Controls.Add(BtnGuncelle);
             groupControl5.Controls.Add(TxtVergi);
             groupControl5.Controls.Add(BtnSil);
@@ -587,12 +594,46 @@
             xtraTabPage4.Size = new System.Drawing.Size(314, 275);
             xtraTabPage4.Text = "Ozel kod1";
             // 
+            // RchKod1
+            // 
+            RchKod1.Dock = System.Windows.Forms.DockStyle.Fill;
+            RchKod1.Location = new System.Drawing.Point(0, 0);
+            RchKod1.Name = "RchKod1";
+            RchKod1.Size = new System.Drawing.Size(314, 275);
+            RchKod1.TabIndex = 1;
+            RchKod1.Text = "";
+            // 
             // xtraTabPage5
             // 
             xtraTabPage5.Controls.Add(RchKod2);
             xtraTabPage5.Name = "xtraTabPage5";
             xtraTabPage5.Size = new System.Drawing.Size(314, 275);
             xtraTabPage5.Text = "Ozel kod 2";
+            // 
+            // RchKod2
+            // 
+            RchKod2.Dock = System.Windows.Forms.DockStyle.Fill;
+            RchKod2.Location = new System.Drawing.Point(0, 0);
+            RchKod2.Name = "RchKod2";
+            RchKod2.Size = new System.Drawing.Size(314, 275);
+            RchKod2.TabIndex = 0;
+            RchKod2.Text = "";
+            // 
+            // xtraTabPage6
+            // 
+            xtraTabPage6.Controls.Add(RchKod3);
+            xtraTabPage6.Name = "xtraTabPage6";
+            xtraTabPage6.Size = new System.Drawing.Size(314, 275);
+            xtraTabPage6.Text = "Ozel kod3";
+            // 
+            // RchKod3
+            // 
+            RchKod3.Dock = System.Windows.Forms.DockStyle.Fill;
+            RchKod3.Location = new System.Drawing.Point(0, 0);
+            RchKod3.Name = "RchKod3";
+            RchKod3.Size = new System.Drawing.Size(314, 275);
+            RchKod3.TabIndex = 1;
+            RchKod3.Text = "";
             // 
             // groupControl6
             // 
@@ -665,39 +706,17 @@
             labelControl16.TabIndex = 31;
             labelControl16.Text = "Kod 1:";
             // 
-            // xtraTabPage6
+            // BtnTemizle
             // 
-            xtraTabPage6.Controls.Add(RchKod3);
-            xtraTabPage6.Name = "xtraTabPage6";
-            xtraTabPage6.Size = new System.Drawing.Size(314, 275);
-            xtraTabPage6.Text = "Ozel kod3";
-            // 
-            // RchKod2
-            // 
-            RchKod2.Dock = System.Windows.Forms.DockStyle.Fill;
-            RchKod2.Location = new System.Drawing.Point(0, 0);
-            RchKod2.Name = "RchKod2";
-            RchKod2.Size = new System.Drawing.Size(314, 275);
-            RchKod2.TabIndex = 0;
-            RchKod2.Text = "";
-            // 
-            // RchKod1
-            // 
-            RchKod1.Dock = System.Windows.Forms.DockStyle.Fill;
-            RchKod1.Location = new System.Drawing.Point(0, 0);
-            RchKod1.Name = "RchKod1";
-            RchKod1.Size = new System.Drawing.Size(314, 275);
-            RchKod1.TabIndex = 1;
-            RchKod1.Text = "";
-            // 
-            // RchKod3
-            // 
-            RchKod3.Dock = System.Windows.Forms.DockStyle.Fill;
-            RchKod3.Location = new System.Drawing.Point(0, 0);
-            RchKod3.Name = "RchKod3";
-            RchKod3.Size = new System.Drawing.Size(314, 275);
-            RchKod3.TabIndex = 1;
-            RchKod3.Text = "";
+            BtnTemizle.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            BtnTemizle.Appearance.Options.UseFont = true;
+            BtnTemizle.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton1.ImageOptions.Image");
+            BtnTemizle.Location = new System.Drawing.Point(80, 476);
+            BtnTemizle.Name = "BtnTemizle";
+            BtnTemizle.Size = new System.Drawing.Size(147, 36);
+            BtnTemizle.TabIndex = 31;
+            BtnTemizle.Text = "Temizle";
+            BtnTemizle.Click += BtnTemizle_Click;
             // 
             // FrmFirmalar
             // 
@@ -743,13 +762,13 @@
             xtraTabControl2.ResumeLayout(false);
             xtraTabPage4.ResumeLayout(false);
             xtraTabPage5.ResumeLayout(false);
+            xtraTabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)groupControl6).EndInit();
             groupControl6.ResumeLayout(false);
             groupControl6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)TxtKod3.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtKod2.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)TxtKod1.Properties).EndInit();
-            xtraTabPage6.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -813,5 +832,6 @@
         private System.Windows.Forms.RichTextBox RchKod1;
         private System.Windows.Forms.RichTextBox RchKod2;
         private System.Windows.Forms.RichTextBox RchKod3;
+        private DevExpress.XtraEditors.SimpleButton BtnTemizle;
     }
 }
