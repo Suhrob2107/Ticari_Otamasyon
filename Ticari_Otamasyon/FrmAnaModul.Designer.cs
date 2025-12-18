@@ -1,6 +1,6 @@
 ﻿namespace Ticari_Otamasyon
 {
-    partial class Form1
+    partial class FrmAnaModul
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaModul));
             ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             BtnUrunler = new DevExpress.XtraBars.BarButtonItem();
             btnStoklar = new DevExpress.XtraBars.BarButtonItem();
@@ -59,7 +59,7 @@
             ribbonControl1.MaxItemId = 16;
             ribbonControl1.Name = "ribbonControl1";
             ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1 });
-            ribbonControl1.Size = new System.Drawing.Size(1137, 150);
+            ribbonControl1.Size = new System.Drawing.Size(1143, 150);
             // 
             // BtnUrunler
             // 
@@ -91,6 +91,7 @@
             BtnMusteriler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnMusteriler.ItemAppearance.Normal.Options.UseFont = true;
             BtnMusteriler.Name = "BtnMusteriler";
+            BtnMusteriler.ItemClick += BtnMusteriler_ItemClick;
             // 
             // BtnFirmalar
             // 
@@ -101,6 +102,7 @@
             BtnFirmalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnFirmalar.ItemAppearance.Normal.Options.UseFont = true;
             BtnFirmalar.Name = "BtnFirmalar";
+            BtnFirmalar.ItemClick += BtnFirmalar_ItemClick;
             // 
             // BtnAnasayfa
             // 
@@ -219,15 +221,17 @@
             // 
             xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // Form1
+            // FrmAnaModul
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1137, 788);
+            ClientSize = new System.Drawing.Size(1143, 735);
             Controls.Add(ribbonControl1);
-            Name = "Form1";
+            IsMdiContainer = true;
+            Name = "FrmAnaModul";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "Form1";
+            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)ribbonControl1).EndInit();
             ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).EndInit();
             ResumeLayout(false);

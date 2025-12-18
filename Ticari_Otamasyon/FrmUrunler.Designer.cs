@@ -71,7 +71,7 @@
             gridControl1.Location = new System.Drawing.Point(5, 12);
             gridControl1.MainView = gridView1;
             gridControl1.Name = "gridControl1";
-            gridControl1.Size = new System.Drawing.Size(878, 609);
+            gridControl1.Size = new System.Drawing.Size(1433, 609);
             gridControl1.TabIndex = 0;
             gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
             // 
@@ -104,9 +104,9 @@
             groupControl1.Controls.Add(MskYil);
             groupControl1.Controls.Add(TxtId);
             groupControl1.Controls.Add(labelControl1);
-            groupControl1.Location = new System.Drawing.Point(880, 12);
+            groupControl1.Location = new System.Drawing.Point(1474, 12);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new System.Drawing.Size(280, 609);
+            groupControl1.Size = new System.Drawing.Size(331, 609);
             groupControl1.TabIndex = 1;
             // 
             // BtnGuncelle
@@ -320,7 +320,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1160, 619);
+            ClientSize = new System.Drawing.Size(1924, 1061);
             Controls.Add(groupControl1);
             Controls.Add(gridControl1);
             Name = "FrmUrunler";
