@@ -123,6 +123,7 @@
             BtnPersoneller.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnPersoneller.ItemAppearance.Normal.Options.UseFont = true;
             BtnPersoneller.Name = "BtnPersoneller";
+            BtnPersoneller.ItemClick += BtnPersoneller_ItemClick;
             // 
             // BtnGiderler
             // 

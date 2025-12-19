@@ -39,11 +39,21 @@ namespace Ticari_Otamasyon
         FrmFirmalar frm;
         private void BtnFirmalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(frm == null || frm.IsDisposed)
+            if (frm == null || frm.IsDisposed)
             {
                 frm = new FrmFirmalar();
                 frm.MdiParent = this;
                 frm.Show();
+            }
+        }
+        FrmPersonel personel;
+        private void BtnPersoneller_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(personel == null || personel.IsDisposed)
+            {
+                personel = new FrmPersonel();
+                personel.MdiParent = this;
+                personel.Show();
             }
         }
     }
