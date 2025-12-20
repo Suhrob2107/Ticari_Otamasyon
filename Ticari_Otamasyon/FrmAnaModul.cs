@@ -49,11 +49,21 @@ namespace Ticari_Otamasyon
         FrmPersonel personel;
         private void BtnPersoneller_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(personel == null || personel.IsDisposed)
+            if (personel == null || personel.IsDisposed)
             {
                 personel = new FrmPersonel();
                 personel.MdiParent = this;
                 personel.Show();
+            }
+        }
+        FrmRehber rehber;
+        private void BtnRehber_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(rehber == null || rehber.IsDisposed)
+            {
+                rehber = new FrmRehber();
+                rehber.MdiParent = this;
+                rehber.Show();
             }
         }
     }

@@ -71,6 +71,10 @@
             // 
             // gridView1
             // 
+            gridView1.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
+            gridView1.Appearance.Row.BorderColor = System.Drawing.Color.FromArgb(128, 255, 128);
+            gridView1.Appearance.Row.Options.UseBackColor = true;
+            gridView1.Appearance.Row.Options.UseBorderColor = true;
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
             gridView1.FocusedRowChanged += gridView1_FocusedRowChanged;

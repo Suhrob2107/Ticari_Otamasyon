@@ -71,6 +71,7 @@
             groupControl2 = new DevExpress.XtraEditors.GroupControl();
             xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
             xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             groupControl7 = new DevExpress.XtraEditors.GroupControl();
             xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
@@ -87,7 +88,6 @@
             labelControl17 = new DevExpress.XtraEditors.LabelControl();
             TxtKod1 = new DevExpress.XtraEditors.TextEdit();
             labelControl16 = new DevExpress.XtraEditors.LabelControl();
-            BtnTemizle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)TxtVergi.Properties).BeginInit();
@@ -128,9 +128,14 @@
             // 
             // gridView1
             // 
+            gridView1.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(255, 192, 192);
+            gridView1.Appearance.Row.BorderColor = System.Drawing.Color.FromArgb(128, 255, 128);
+            gridView1.Appearance.Row.Options.UseBackColor = true;
+            gridView1.Appearance.Row.Options.UseBorderColor = true;
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
             gridView1.FocusedRowChanged += gridView1_FocusedRowChanged;
+            gridView1.DoubleClick += gridView1_DoubleClick;
             // 
             // gridControl1
             // 
@@ -560,6 +565,19 @@
             groupControl5.Size = new System.Drawing.Size(326, 569);
             groupControl5.TabIndex = 0;
             groupControl5.Text = "groupControl5";
+            groupControl5.Paint += groupControl5_Paint;
+            // 
+            // BtnTemizle
+            // 
+            BtnTemizle.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            BtnTemizle.Appearance.Options.UseFont = true;
+            BtnTemizle.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("BtnTemizle.ImageOptions.Image");
+            BtnTemizle.Location = new System.Drawing.Point(80, 476);
+            BtnTemizle.Name = "BtnTemizle";
+            BtnTemizle.Size = new System.Drawing.Size(147, 36);
+            BtnTemizle.TabIndex = 31;
+            BtnTemizle.Text = "Temizle";
+            BtnTemizle.Click += BtnTemizle_Click;
             // 
             // xtraTabPage3
             // 
@@ -705,18 +723,6 @@
             labelControl16.Size = new System.Drawing.Size(43, 18);
             labelControl16.TabIndex = 31;
             labelControl16.Text = "Kod 1:";
-            // 
-            // BtnTemizle
-            // 
-            BtnTemizle.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            BtnTemizle.Appearance.Options.UseFont = true;
-            BtnTemizle.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton1.ImageOptions.Image");
-            BtnTemizle.Location = new System.Drawing.Point(80, 476);
-            BtnTemizle.Name = "BtnTemizle";
-            BtnTemizle.Size = new System.Drawing.Size(147, 36);
-            BtnTemizle.TabIndex = 31;
-            BtnTemizle.Text = "Temizle";
-            BtnTemizle.Click += BtnTemizle_Click;
             // 
             // FrmFirmalar
             // 

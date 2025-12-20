@@ -183,5 +183,15 @@ namespace Ticari_Otamasyon
         {
             temizle();
         }
+
+        private void groupControl5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

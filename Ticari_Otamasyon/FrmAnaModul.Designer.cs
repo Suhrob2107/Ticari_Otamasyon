@@ -174,6 +174,7 @@
             BtnRehber.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnRehber.ItemAppearance.Normal.Options.UseFont = true;
             BtnRehber.Name = "BtnRehber";
+            BtnRehber.ItemClick += BtnRehber_ItemClick;
             // 
             // BtnFaturalar
             // 
