@@ -134,6 +134,7 @@
             BtnGiderler.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnGiderler.ItemAppearance.Normal.Options.UseFont = true;
             BtnGiderler.Name = "BtnGiderler";
+            BtnGiderler.ItemClick += BtnGiderler_ItemClick;
             // 
             // BtnCasa
             // 

@@ -59,11 +59,21 @@ namespace Ticari_Otamasyon
         FrmRehber rehber;
         private void BtnRehber_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(rehber == null || rehber.IsDisposed)
+            if (rehber == null || rehber.IsDisposed)
             {
                 rehber = new FrmRehber();
                 rehber.MdiParent = this;
                 rehber.Show();
+            }
+        }
+        FrmGiderler giderler;
+        private void BtnGiderler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(giderler == null || giderler.IsDisposed)
+            {
+                giderler = new FrmGiderler();
+                giderler.MdiParent = this;
+                giderler.Show();
             }
         }
     }

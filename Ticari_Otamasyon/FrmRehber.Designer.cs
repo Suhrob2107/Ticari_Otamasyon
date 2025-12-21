@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRehber));
             xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -58,8 +59,9 @@
             // xtraTabPage1
             // 
             xtraTabPage1.Controls.Add(gridControl1);
+            xtraTabPage1.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("xtraTabPage1.ImageOptions.Image");
             xtraTabPage1.Name = "xtraTabPage1";
-            xtraTabPage1.Size = new System.Drawing.Size(1922, 1036);
+            xtraTabPage1.Size = new System.Drawing.Size(1922, 1017);
             xtraTabPage1.Text = "Musteriler";
             // 
             // gridControl1
@@ -84,6 +86,7 @@
             // xtraTabPage2
             // 
             xtraTabPage2.Controls.Add(gridControl2);
+            xtraTabPage2.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("xtraTabPage2.ImageOptions.Image");
             xtraTabPage2.Name = "xtraTabPage2";
             xtraTabPage2.Size = new System.Drawing.Size(1922, 1036);
             xtraTabPage2.Text = "Firmalar";

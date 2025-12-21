@@ -26,18 +26,23 @@ namespace Ticari_Otamasyon
 
         private void BtnGonder_Click(object sender, EventArgs e)
         {
+            string mail = "tolibjanov05@gmail.com";
+            string sifre = "rpqf orps spgz ahku"; // App Password (boşluklar olabilir)
+
             MailMessage mesajim = new MailMessage();
-            SmtpClient istemci = new SmtpClient();
-            istemci.Credentials = new System.Net.NetworkCredential("Mail", "Sifre");
-            istemci.Port = 587;
-            istemci.Host = "smtp.gmail.com";
+            SmtpClient istemci = new SmtpClient("smtp.gmail.com", 587);
+
+            istemci.Credentials = new NetworkCredential(mail, sifre);
             istemci.EnableSsl = true;
+
+            mesajim.From = new MailAddress(mail);
             mesajim.To.Add(TxtMailAddress.Text);
-            mesajim.From = new MailAddress("Mail");
             mesajim.Subject = TxtKonu.Text;
             mesajim.Body = TxtMesaj.Text;
+
             istemci.Send(mesajim);
-            MessageBox.Show("Mailiniz Gönderilmiştir");
+
+            MessageBox.Show("Mail Gönderildi");
         }
     }
 }
