@@ -69,11 +69,21 @@ namespace Ticari_Otamasyon
         FrmGiderler giderler;
         private void BtnGiderler_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(giderler == null || giderler.IsDisposed)
+            if (giderler == null || giderler.IsDisposed)
             {
                 giderler = new FrmGiderler();
                 giderler.MdiParent = this;
                 giderler.Show();
+            }
+        }
+        FrmBankalar bankalar;
+        private void BtnBankalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(bankalar == null || bankalar.IsDisposed)
+            {
+                bankalar = new FrmBankalar();
+                bankalar.MdiParent = this;
+                bankalar.Show();
             }
         }
     }
