@@ -79,11 +79,21 @@ namespace Ticari_Otamasyon
         FrmBankalar bankalar;
         private void BtnBankalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(bankalar == null || bankalar.IsDisposed)
+            if (bankalar == null || bankalar.IsDisposed)
             {
                 bankalar = new FrmBankalar();
                 bankalar.MdiParent = this;
                 bankalar.Show();
+            }
+        }
+        FrmFaturalar faturalar;
+        private void BtnFaturalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if(faturalar == null || faturalar.IsDisposed)
+            {
+                faturalar = new FrmFaturalar();
+                faturalar.MdiParent = this;
+                faturalar.Show();
             }
         }
     }

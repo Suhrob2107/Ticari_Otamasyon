@@ -544,7 +544,7 @@
             xtraTabPage2.Controls.Add(groupControl5);
             xtraTabPage2.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("xtraTabPage2.ImageOptions.Image");
             xtraTabPage2.Name = "xtraTabPage2";
-            xtraTabPage2.Size = new System.Drawing.Size(329, 584);
+            xtraTabPage2.Size = new System.Drawing.Size(329, 565);
             xtraTabPage2.Text = "Adres bilgileri";
             // 
             // groupControl5
@@ -587,7 +587,7 @@
             xtraTabPage3.Controls.Add(groupControl6);
             xtraTabPage3.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("xtraTabPage3.ImageOptions.Image");
             xtraTabPage3.Name = "xtraTabPage3";
-            xtraTabPage3.Size = new System.Drawing.Size(329, 584);
+            xtraTabPage3.Size = new System.Drawing.Size(329, 565);
             xtraTabPage3.Text = "Ozel Kodlar";
             // 
             // groupControl7

@@ -187,6 +187,7 @@
             BtnFaturalar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnFaturalar.ItemAppearance.Normal.Options.UseFont = true;
             BtnFaturalar.Name = "BtnFaturalar";
+            BtnFaturalar.ItemClick += BtnFaturalar_ItemClick;
             // 
             // BtnAyarlar
             // 
