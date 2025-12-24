@@ -563,6 +563,7 @@
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
             gridView1.FocusedRowChanged += gridView1_FocusedRowChanged;
+            gridView1.DoubleClick += gridView1_DoubleClick;
             // 
             // FrmFaturalar
             // 
