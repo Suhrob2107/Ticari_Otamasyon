@@ -155,6 +155,7 @@
             BtnNotlar.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             BtnNotlar.ItemAppearance.Normal.Options.UseFont = true;
             BtnNotlar.Name = "BtnNotlar";
+            BtnNotlar.ItemClick += BtnNotlar_ItemClick;
             // 
             // BtnBankalar
             // 
